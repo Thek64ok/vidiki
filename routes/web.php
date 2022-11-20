@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\MovieController;
+use App\Http\Controllers\ParseVidiki;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,7 +18,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/parse', [\App\Http\Controllers\ParseVidiki::class, 'index']);
+Route::get('/parse', [ParseVidiki::class, 'index']);
+
+Route::post('movie', [MovieController::class, 'index'])
+    ->name('movie');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
