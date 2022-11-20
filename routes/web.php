@@ -19,6 +19,10 @@ Route::get('/', function () {
 
 Route::get('/parse', [\App\Http\Controllers\ParseVidiki::class, 'index']);
 
+Route::get('/parse_kinopoisk', [\App\Http\Controllers\ParseVidiki::class, 'getKinopoiskInfo']);
+
+Route::get('/check', [\App\Http\Controllers\ParseVidiki::class, 'check']);
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
