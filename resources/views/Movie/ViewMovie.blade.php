@@ -22,10 +22,34 @@
 <body data-home-page="Главная.html" data-home-page-title="Главная" class="u-body u-overlap u-xl-mode" data-lang="ru">
 <style>
     body {
-        background-image: url(img/cb9eb93af50f884fed950b3c55b297d809f9c2c1e89c5d320980ae711d3781b2250e6df3c4fc5345df11f363b5b9f30be95ba6933fff72d728bc91_1280.png);
+        background-image: url(img/asd.png);
         background-attachment: fixed;
     }
+    .Pages{
+        padding-left: 27.5%;
+        padding-top: 5%;
+        padding-right: 25%;
+
+    }
+
 </style>
+<section class="Pages">
+
+    <img>
+        <style>
+            div{
+                border: 2px solid black;
+
+
+            }
+        </style>
+        <img
+            src="./img/{{$img_path}}">
+{{--    {{$link}}--}}
+    <iframe src="//86.annacdn.cc/isNNaZqdwveX/movie/14" width="640" height="480" frameborder="0" allowfullscreen></iframe>
+
+</section>
+
 <header class="u-clearfix u-header u-image u-header" id="sec-b67e" data-image-width="1280" data-image-height="1280">
     <div class="u-clearfix u-image-default u-sheet u-sheet-1" data-image-width="1280" data-image-height="942">
         <a href="{{asset('dashboard')}}" class="u-image u-logo u-image-1" data-image-width="1280"
@@ -105,22 +129,8 @@
         </nav>
     </div>
 </header>
-<section class="u-clearfix u-section-1" id="sec-9b57">
-    <div class="u-clearfix u-sheet u-sheet-1">
-        <div class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
-            <div class="u-layout">
-                <div class="u-layout-row">
-                    <div class="u-container-align-center u-container-style u-layout-cell u-size-60 u-layout-cell-1">
-                        <div class="u-container-layout u-valign-middle u-container-layout-1"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="u-clearfix u-section-1" id="sec-9b57">
-    <iframe src="//86.annacdn.cc/isNNaZqdwveX/movie/21" width="1280" height="480" frameborder="0" allowfullscreen></iframe>
-</section>
+
+
 </body>
 </html>
 <x-slot name="header">

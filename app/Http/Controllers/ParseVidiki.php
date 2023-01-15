@@ -21,7 +21,7 @@ class ParseVidiki extends Controller
                 )
             );
             $metaData = json_decode(file_get_contents('https://videocdn.tv/api/movies/?'.$data));
-            //dd($metaData);vidiki.ckbuz99v0imf.us-east-1.rds.amazonaws.com
+//            dd($metaData);vidiki.ckbuz99v0imf.us-east-1.rds.amazonaws.com
             foreach($metaData->data as $meta){
                 try{
                     DB::table('movie')->insert([

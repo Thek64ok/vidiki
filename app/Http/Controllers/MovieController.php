@@ -12,8 +12,9 @@ class MovieController extends Controller
     {
 
         $Movie = MovieModel::getMovieName($request->id);
-        return view('Movie/ViewMovie');
-//        dd((object)$Movie);
+
+        return view('movie', compact('Movie'));
+
 
     }
 }

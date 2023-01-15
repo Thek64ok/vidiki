@@ -17,8 +17,17 @@ class MovieModel extends Model
 
     public static function getMovieName($movie)
     {
-        $date = MovieModel::where('id', $movie)->get();
-
+        $date = MovieModel::select('*')
+            ->join('images', 'images.movie_id', '=', 'movie.id')
+            ->where('movie.id', $movie)
+            ->get();
         return $date[0]->attributes;
+    }
+
+    public static function AllMovie()
+    {
+        $date = MovieModel::select('*')
+            ->join('images', 'images.movie_id', '=', 'movie.id');
+        return $date;
     }
 }
