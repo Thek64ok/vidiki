@@ -56,7 +56,13 @@
                 </nav>
 
                 <div class="menu-button w-nav-button">
-                    <div class="w-icon-nav-menu"></div>
+                    <div class="w-icon-nav-menu">
+                        <form method="POST" action="{{route('search')}}">
+                            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                            <input type="text" name="search_name" placeholder="Найдется все..." class="input-search">
+                            <input type="submit" value="Найти" class="input-search">
+                        </form>
+                    </div>
                 </div>
 
             </div>

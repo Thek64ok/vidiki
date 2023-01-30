@@ -28,6 +28,8 @@ Route::get('movie', [MovieController::class, 'index'])
 Route::post('movie', [MovieController::class, 'index'])
     ->name('movie');
 
+Route::post('search', [MovieController::class, 'searchBy'])->name('search');
+
 Route::get('/parse_kinopoisk', [ParseVidiki::class, 'getKinopoiskInfo']);
 
 Route::get('/check', [ParseVidiki::class, 'check']);

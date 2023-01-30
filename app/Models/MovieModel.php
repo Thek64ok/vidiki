@@ -30,4 +30,11 @@ class MovieModel extends Model
             ->join('images', 'images.movie_id', '=', 'movie.id');
         return $date;
     }
+
+    public static function getMovieBySearch($data){
+        return MovieModel::select('*')
+            ->join('images', 'images.movie_id', '=', 'movie.id', 'full')
+            ->where('ru_title', 'ilike', '%'.$data['search_name'].'%')
+            ->orWhere('orig_title', 'ilike', '%'.$data['search_name'].'%');
+    }
 }

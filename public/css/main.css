@@ -348,3 +348,9 @@
     margin-top: 250px;
    margin-left: 20%;
 }
+
+.input-search{
+    padding: 7px;
+    border-radius: 10px;
+    border-color: green;
+}

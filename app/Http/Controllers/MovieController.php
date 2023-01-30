@@ -10,11 +10,13 @@ class MovieController extends Controller
 {
     public function index(Request $request)
     {
-
         $Movie = MovieModel::getMovieName($request->id);
-
         return view('movie', compact('Movie'));
+    }
 
-
+    public function searchBy(Request $request){
+        $inputs = $request->all();
+        $movie = MovieModel::getMovieBySearch($inputs)->paginate(15);
+        return view('Movie/mainpage', compact('movie'));
     }
 }
